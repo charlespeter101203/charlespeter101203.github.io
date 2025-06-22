@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='styles.css'>
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <h2 id='logo-name'>My Portfolio</h2>
+    <nav class='nav-bar'>
+      <ul class='nav-menu'>
+        <li class='nav-list'><a href='#home-section'>Home</a></li>
+        <li class='nav-list'><a href='#about-section'>About</a></li>
+        <li class='nav-list'><a href='#skills-section'>Skills</a></li>
+        <li class='nav-list'><a href='#contact-section'>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main> <!-- Inro About me -->
+
+    <!-- Home -->
+    <section id='home-section'>
+      <div class='home'>
+        <div class="home-hero">
+          <h1>Hi, I'm <span class='highlight-name'>Charles</span></h1>
+          <p>A Computer Engineering student passionate about front-end web development. 
+          Currently enhancing my skills at Uplift Code Camp to build beautiful, functional websites.
+          </p>
+          <div class='know-more'>
+            <a href='#contact-section' class='know-more-get-in-touch'>Get in Touch</a>
+            <a href='#about-section' class='know-more-learn-more'>Learn More</a>
+          </div>
+        </div>
+        <div class='home-photo'>
+          <img src='images/profile-pic.jpg' alt='my-photo-charles'>
+        </div>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id='about-section'>
+      <div class='about-me'>
+        <div class='about-me-hero'>
+          <h2 class='section-heading'>About Me</h2>
+          <p>
+            Hello! I'm a Computer Engineering student with a passion for web development and creating 
+            user-friendly digital experiences. I'm currently focused on mastering front-end technologies 
+            to build responsive and visually appealing websites.
+          </p>
+          <p>
+            My journey in tech started with my computer engineering studies, where I developed a strong 
+            foundation in programming concepts. Now, I'm expanding my skills through the Uplift Code Camp 
+            Program, where I'm learning modern web development practices.
+          </p>
+          <div class='info-card'>
+            <h3>Education</h3>
+            <p>BS in Computer Engineering</p>
+            <p><em>STI College of Cotabato</em></p>
+          </div>
+          <div class='info-card'>
+            <h3>Current Training</h3>
+            <p>Front-End Web Development</p>
+            <p><em>Uplift Code Camp</em></p>
+          </div>
+        </div>
+        <div class="about-me-image">
+          <img src='images/red-pic.jpg' alt='about-me-image'>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id='skills-section'>
+      <div class='my-skills'>
+        <div class='my-skills-hero'>
+          <h2 class='section-heading'>My Skills</h2>
+          <p>I'm continuously learning and improving my skills in various web technologies.</p>
+        </div>
+        <div class='my-skills-list'>
+          <ul class='skills-list'>
+            <li class='skill-item'>
+              <img src='images/git.png' alt='Git Logo'>Git</li>
+            <li class='skill-item'>
+              <img src='images/html.png' alt='HTML Logo'>HTML</li>
+            <li class='skill-item'>
+              <img src='images/css.png' alt='CSS Logo'>CSS</li>
+            <li class='skill-item'>
+              <img src='images/javascript.png' alt='Javascript Logo'>JavaScript</li>
+            <li class='skill-item'>
+              <img src='images/wordpress.png' alt='WordPress Logo'>WordPress</li>
+            <li class='skill-item'>
+              <img src='images/bootstrap.png' alt='Bootstrap Logo'>Bootstrap</li>
+          </ul>
+        </div>
+        <div class='resume'>
+          <a href='Inocentes_Charles-Peter_Dolino-FWD.pdf' target="_blank" class='resume-button'>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id='contact-section'>
+      <div class='my-contact'>
+        <div class='my-contact-hero'>
+          <h2 class='section-heading'>Get in Touch</h2>
+          <p>Feel free to reach out if you have any questions or would like to collaborate on a project.</p>
+        </div>
+        <div class='my-contact-info'>
+          <ul class='contact-list'>
+            <li class='contact-item'>
+              <a href='https://mail.google.com/mail/?view=cm&fs=1&to=inocentescharlespeter@gmail.com' target='_blank' rel="noopener noreferrer">
+                <img src='images/email.png' alt='Email Logo'>Email</a>
+            </li>
+            <li class='contact-item'>
+              <a href='https://github.com/charlespeter101203' target='_blank' rel="noopener noreferrer">
+                <img src='images/github.png' alt='GitHub Logo'>GitHub</a>
+            </li>
+            <li class='contact-item'>
+              <a href='https://www.linkedin.com/in/charlespeterinocentes/' target='_blank' rel="noopener noreferrer">
+                <img src='images/linkedin.png' alt='LinkedIn Logo'>LinkedIn</a>
+            </li>
+            <li class='contact-item'>
+              <a href='https://www.facebook.com/charlespeter.inocentes' target='_blank' rel="noopener noreferrer">
+                <img src='images/facebook.png' alt='Facebook Logo'>Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class='footer'>
+    <p>© 2025 Charles Peter Inocentes | Computer Engineering Student</p>
+  </footer>
+  <script>
+    function downloadResume(element) {
+      // Create a temporary, invisible anchor element
+      const link = document.createElement('a');
+      link.href = element.href;
+
+      // Set the download attribute to trigger the download
+      link.setAttribute('download', ''); 
+
+      // Append to the document, programmatically click it, and then remove it
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
